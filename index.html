@@ -7,38 +7,58 @@
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-SOMEHASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Style for social media buttons */
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .image-container {
+            flex: 1; /* Pushes social buttons to bottom */
+        }
+
         .social-buttons {
-            margin-top: 20px;
+            position: fixed;  /* Stick to bottom of viewport */
+            bottom: 20px;     /* Distance from bottom */
+            left: 50%;        /* Center horizontally */
+            transform: translateX(-50%);
             text-align: center;
         }
+
         .social-buttons a {
-            color: white;
-            font-size: 40px;
-            margin: 0 15px;
+            color: white;        /* All white icons */
+            font-size: 40px;     /* Icon size */
+            margin: 0 15px;      /* Space between icons */
             text-decoration: none;
-            transition: transform 0.2s, color 0.2s;
+            transition: transform 0.2s;
         }
+
         .social-buttons a:hover {
-            transform: scale(1.2);
-            color: #ffcc00; /* hover color */
+            transform: scale(1.2); /* Slight zoom on hover */
         }
     </style>
 </head>
-<body style="background-color:black; text-align:center;">
+<body>
 
-    <a href="https://discord.com/invite/bmhl" target="_blank">
-        <img src="utils/coming_soon_image1.png" 
-             alt="Join Discord" 
-             style="width:1000px; height:auto; border:none; cursor:pointer;">
-    </a>
+    <div class="image-container">
+        <a href="https://discord.com/invite/bmhl" target="_blank">
+            <img src="utils/coming_soon_image1.png" 
+                 alt="Join Discord" 
+                 style="width:1000px; height:auto; border:none; cursor:pointer;">
+        </a>
+    </div>
 
-    <!-- Social media buttons -->
+    <!-- Social media buttons fixed at the bottom -->
     <div class="social-buttons">
-        <a href="https://x.com/BMHLRoblox" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.tiktok.com/@.bmhl" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
         <a href="https://discord.com/invite/bmhl" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.youtube.com/@BMHLNetwork" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.youtube.com/@yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 
 </body>
