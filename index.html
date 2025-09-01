@@ -4,7 +4,7 @@
     <title>Official Site of the BMHL</title>
     <link rel="icon" type="image/png" href="utils/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN for icons -->
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-SOMEHASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
@@ -12,46 +12,44 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
-        .image-container {
-            flex: 1; /* Pushes social buttons to bottom */
+        .main-image {
+            max-width: 90%;
+            height: auto;
+            border: none;
+            cursor: pointer;
+            margin-top: 50px;
         }
 
         .social-buttons {
-            position: fixed;  /* Stick to bottom of viewport */
-            bottom: 20px;     /* Distance from bottom */
-            left: 50%;        /* Center horizontally */
+            position: fixed;       /* Fixed at bottom */
+            bottom: 20px;
+            left: 50%;
             transform: translateX(-50%);
-            text-align: center;
+            z-index: 9999;         /* Ensure on top */
         }
 
         .social-buttons a {
-            color: white;        /* All white icons */
-            font-size: 40px;     /* Icon size */
-            margin: 0 15px;      /* Space between icons */
+            color: white;
+            font-size: 40px;
+            margin: 0 15px;
             text-decoration: none;
             transition: transform 0.2s;
         }
 
         .social-buttons a:hover {
-            transform: scale(1.2); /* Slight zoom on hover */
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body>
 
-    <div class="image-container">
-        <a href="https://discord.com/invite/bmhl" target="_blank">
-            <img src="utils/coming_soon_image1.png" 
-                 alt="Join Discord" 
-                 style="width:1000px; height:auto; border:none; cursor:pointer;">
-        </a>
-    </div>
+    <a href="https://discord.com/invite/bmhl" target="_blank">
+        <img src="utils/coming_soon_image1.png" 
+             alt="Join Discord" 
+             class="main-image">
+    </a>
 
     <!-- Social media buttons fixed at the bottom -->
     <div class="social-buttons">
