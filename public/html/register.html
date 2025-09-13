@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Official Site of the BMHL</title>
+    <link rel="icon" type="image/x-icon" href="/public/utils/Icons/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <script src="/public/discord-oauth.js"></script> <!-- relative path -->
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <img src="/public/utils/Icons/BMHL_HeaderIcon.png" alt="BMHL Logo">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <button id="discord-login">Login with Discord</button>
+    </main>
+</body>
+<footer>
+    <ul>
+        <p>PROPERTY OF BMHL. ALL RIGHTS RESERVED.</p>
+    </ul>
+</footer>
+    
+<script>
+  // Clean URL if it ends with index.html
+  if (window.location.pathname.endsWith("register.html")) {
+    const newPath = window.location.pathname.replace("register.html", "register");
+    window.history.replaceState(null, "", newPath);
+  }
+</script>
+</html>
